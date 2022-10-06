@@ -23,6 +23,12 @@ namespace TravelAgency
         public MainWindow()
         {
             InitializeComponent();
+            Base.EM = new Entities1();
+        }
+
+        private void gotoPageRegistration_Click(object sender, RoutedEventArgs e)
+        {
+            frm.Navigate(new PageRegistration());
         }
     }
 }
