@@ -17,7 +17,7 @@
         
         
         <TextBlock FontSize="40">Регистрация</TextBlock>
-        <StackPanel Grid.Row="1" Orientation="Vertical" Background="Aqua">
+        <StackPanel Grid.Row="1" Orientation="Vertical" Background="AliceBlue">
 
             <StackPanel Grid.Row="1"  Orientation="Horizontal">
                 <GroupBox Header="Фамилия" Width="100" Height="45" VerticalAlignment="Top">

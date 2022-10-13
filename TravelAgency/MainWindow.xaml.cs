@@ -30,5 +30,10 @@ namespace TravelAgency
         {
             frm.Navigate(new PageRegistration());
         }
+
+        private void gotoPageАuthorization_Click(object sender, RoutedEventArgs e)
+        {
+            frm.Navigate(new PageAuthorization());
+        }
     }
 }

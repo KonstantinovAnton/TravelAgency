@@ -25,24 +25,33 @@ namespace TravelAgency
             InitializeComponent();
         }
 
-        private void btnRegistrate_Click(object sender, RoutedEventArgs e)
+        private void btnRegistrate_Click(object sender, RoutedEventArgs e) // Добавления пользователя в БД
         {
-            User user = new User()
+
+            try
             {
-                surname = textBoxSurname.Text,
-                name = textBoxName.Text,
-                patronymic = textBoxPatronymic.Text,
-                login = textBoxLogin.Text,
-                password = passBox.ToString().GetHashCode(),
-                birthday = datePickBirthday.SelectedDate.Value,
-                id_role = 1,
-                id_gender = 1
-            };
+                User user = new User()
+                {
+                    surname = textBoxSurname.Text,
+                    name = textBoxName.Text,
+                    patronymic = textBoxPatronymic.Text,
+                    login = textBoxLogin.Text,
+                    password = passBox.ToString().GetHashCode(),
+                    birthday = datePickBirthday.SelectedDate.Value,
+                    id_role = 2,
+                    id_gender = 1
+                };
 
-            Base.EM.User.Add(user);
-            Base.EM.SaveChanges();
-            MessageBox.Show("user added");
+                Base.EM.User.Add(user);
+                Base.EM.SaveChanges();
 
+                MessageBox.Show("Пользователь успешно зарегистрирован", "Регистрация", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch
+            {
+
+            }
+            
         }
     }
 }
